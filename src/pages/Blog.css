@@ -5,6 +5,19 @@
   margin-top: 50px;
 }
 
+.blog .go-back {
+  color: #0b3948;
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.blog .go-back a {
+  text-decoration: none;
+}
+
 .blog h2 {
   color: #0b3948;
   margin-bottom: 20px;

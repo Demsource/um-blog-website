@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Navigate, useParams } from "react-router";
+import { Link, Navigate, useParams } from "react-router";
 import { GetBlogContext, ValidSlugsContext } from "../AppContext";
 import "./Blog.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,11 +12,12 @@ import {
   LinkedinShareButton,
   LinkedinIcon,
 } from "react-share";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = () => {
   const params = useParams();
 
-  // handling urls in case there is not such a blog for slug
+  // handling urls in case there is not such a blog for slug. Redirect to any non app page e.g: "error" to display Error Page
   const validSlugs = useContext(ValidSlugsContext);
 
   if (!validSlugs.includes(params.blog)) {
@@ -33,6 +34,13 @@ const Blog = () => {
 
   return (
     <div className="blog">
+      <div className="go-back">
+        <Link to="/">
+          <span>
+            <FontAwesomeIcon icon={faArrowLeft} /> Back to Home Page
+          </span>
+        </Link>
+      </div>
       <h2>{blog.title}</h2>
       <div className="image">
         <img src={blog.image} alt={blog.title} width="500px" />
