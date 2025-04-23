@@ -4,13 +4,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./Layout.css";
 
-const Layout = () => {
+const Layout = ({ error }) => {
   return (
     <>
       <Header />
-      <main className="container">
-        <Outlet />
-      </main>
+      <main className="container">{error ? error : <Outlet />}</main>
       <Footer />
     </>
   );
