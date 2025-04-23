@@ -1,0 +1,42 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.blog h2 {
+  color: #0b3948;
+  margin-bottom: 20px;
+}
+
+.blog p.content {
+  max-width: 500px;
+  white-space: pre-wrap;
+  text-align: justify;
+  margin-top: 30px;
+}
+
+.blog .publish-date {
+  margin-top: 30px;
+}
+
+.blog .soc-icons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 30px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog .image img {
+    width: 300px;
+  }
+  .blog p.content {
+    max-width: 300px;
+  }
+  .blog .soc-icons {
+    width: 300px;
+  }
+}

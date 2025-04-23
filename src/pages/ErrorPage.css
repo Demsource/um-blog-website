@@ -1,0 +1,23 @@
+.error-page {
+  color: #0b3948;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 200px;
+}
+
+.error-page h2 {
+  font-size: 60px;
+}
+
+.error-page p {
+  text-align: center;
+  max-width: 400px;
+}
+
+.error-page p.go-home a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #416165;
+}

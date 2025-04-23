@@ -1,0 +1,25 @@
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tags ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.tags ul li.tag {
+  border: 2px solid #416165;
+  border-radius: 10px;
+  color: #416165;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.tags ul li.tag.active {
+  background-color: #416165;
+  color: white;
+}

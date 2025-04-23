@@ -1,0 +1,22 @@
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.search-box input {
+  border-radius: 10px;
+  border-color: #0b3948;
+  color: #416165;
+  outline: none;
+  width: 60%;
+  height: 30px;
+  padding: 20px;
+  padding-right: 40px;
+}
+
+.search-box svg {
+  color: #0b3948;
+  margin-left: -30px;
+}

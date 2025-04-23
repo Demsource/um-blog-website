@@ -1,0 +1,12 @@
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  list-style-type: none;
+}
+
+.blog-list .no-blogs {
+  color: #0b3948;
+  font-weight: bold;
+}
