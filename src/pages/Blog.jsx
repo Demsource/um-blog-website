@@ -4,15 +4,9 @@ import { GetBlogContext, ValidSlugsContext } from "../AppContext";
 import "./Blog.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  XIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-} from "react-share";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import SocIcons from "../components/SocIcons";
+import Comments from "../components/Comments";
 
 const Blog = () => {
   const params = useParams();
@@ -51,27 +45,11 @@ const Blog = () => {
           <FontAwesomeIcon icon={faCalendarDays} /> {blog.publishDate}
         </span>
       </div>
-      {/*Note: Social sharing functionality will not work properly on localhost  */}
-      <div className="soc-icons">
-        <FacebookShareButton
-          url={window.location.href}
-          quote={blog.title}
-          hashtag={`#${blog.tags[0]}`}
-        >
-          <FacebookIcon round size="40px" />
-        </FacebookShareButton>
-        <TwitterShareButton
-          url={window.location.href}
-          title={blog.title}
-          hashtags={blog.tags}
-        >
-          <XIcon round size="40px" />
-        </TwitterShareButton>
-        <LinkedinShareButton url={window.location.href} title={blog.title}>
-          <LinkedinIcon round size="40px" />
-        </LinkedinShareButton>
-      </div>
+      {/*Note: Social sharing functionality will not work properly on localhost. 
+      Here is the app deployed on the github pages: https://demsource.github.io/um-blog-website/ */}
+      <SocIcons blog={blog} />
       {/* --------------------------------------------------------- */}
+      <Comments blogId={blog.slug} />
     </div>
   );
 };

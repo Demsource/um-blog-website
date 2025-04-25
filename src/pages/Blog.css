@@ -6,7 +6,6 @@
 }
 
 .blog .go-back {
-  color: #0b3948;
   font-weight: bold;
   display: flex;
   justify-content: end;
@@ -15,7 +14,11 @@
 }
 
 .blog .go-back a {
+  color: #0b3948;
   text-decoration: none;
+}
+.blog .go-back a:hover {
+  color: #416165;
 }
 
 .blog h2 {
@@ -24,6 +27,7 @@
 }
 
 .blog p.content {
+  color: #0b3948;
   max-width: 500px;
   white-space: pre-wrap;
   text-align: justify;
@@ -31,6 +35,7 @@
 }
 
 .blog .publish-date {
+  color: #0b3948;
   margin-top: 30px;
 }
 

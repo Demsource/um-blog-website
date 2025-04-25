@@ -9,7 +9,7 @@ const BlogPreview = ({ blog }) => {
     <li className="blog-item">
       <Link to={`/blog/${blog.slug}`}>
         <div>
-          <img src={blog.image} alt={blog.title} width="300px" height="300px" />
+          <img src={blog.coverImage} alt={blog.title} width="300px" height="300px" />
         </div>
         <div className="meta">
           <span>

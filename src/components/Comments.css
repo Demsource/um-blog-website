@@ -1,0 +1,78 @@
+.comments-wrapper {
+  background-color: #d9dbf1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.comments-wrapper .comments {
+  min-width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .comments-wrapper .comments {
+    min-width: 300px;
+  }
+}
+
+.comments-wrapper .comments h4 {
+  color: #0b3948;
+  font-size: 18px;
+}
+
+.comments-wrapper .comments form h5 {
+  color: #0b3948;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.comments-wrapper .comments form input,
+.comments-wrapper .comments form textarea {
+  outline: none;
+  margin-top: 10px;
+  border: 2px solid #416165;
+  border-radius: 10px;
+  padding: 10px;
+}
+.comments-wrapper .comments form textarea {
+  height: 150px;
+  width: 100%;
+}
+
+.comments-wrapper .comments form button {
+  background-color: #0b3948;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+}
+.comments-wrapper .comments form button:hover {
+  background-color: #416165;
+}
+
+.comments-wrapper .comments .messages {
+  margin-top: 30px;
+}
+
+.comments-wrapper .comments .messages .message {
+  color: #0b3948;
+  border-top: 2px solid #acb0bd;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.comments-wrapper .comments .messages .message .author {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comments-wrapper .comments .messages .message .text {
+  margin-top: 10px;
+}
