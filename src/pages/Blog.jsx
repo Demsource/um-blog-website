@@ -11,7 +11,8 @@ import Comments from "../components/Comments";
 const Blog = () => {
   const params = useParams();
 
-  // handling urls in case there is not such a blog for slug. Redirect to any non app page e.g: "error" to display Error Page
+  // Handling urls in case there is not such a blog for slug.
+  // Redirect to any non app page e.g: "error" to display Error Page
   const validSlugs = useContext(ValidSlugsContext);
 
   if (!validSlugs.includes(params.blog)) {
@@ -23,8 +24,6 @@ const Blog = () => {
   const getBlog = useContext(GetBlogContext);
   const blog = getBlog(params.blog);
   // ---------------------------------------------------------
-
-  console.log(blog);
 
   return (
     <div className="blog">

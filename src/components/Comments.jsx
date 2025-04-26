@@ -10,6 +10,7 @@ const Comments = ({ blogId }) => {
   const { blogs, setBlogs } = useContext(BlogsContext);
 
   useEffect(() => {
+    // Syncing blog comments from the localstorage to the blogs context state
     const comments = localStorage.getItem(blogId);
     const parsedComments = comments ? JSON.parse(comments) : [];
 
@@ -35,25 +36,28 @@ const Comments = ({ blogId }) => {
 
       return updatedBlogs;
     });
+    // ---------------------------------------------------------
   }, [blogId]);
 
+  // Get current blog comments from the blogs state
   const comments = blogs.find((blog) => blog.slug === blogId).comments;
-
-  console.log(comments);
+  // ---------------------------------------------------------
 
   const handleChange = (e) => {
+    // Saving new comment to the formData component state
     const { name, value } = e.target;
 
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
     }));
+    // ---------------------------------------------------------
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // console.log(blogId, formData);
 
+    // Saving new comment to the local storage and blogs context state
     const newComment = { ...formData, commentId: uuidv4() };
 
     const comments = localStorage.getItem(blogId);
@@ -73,6 +77,7 @@ const Comments = ({ blogId }) => {
 
       return updatedBlogs;
     });
+    // ---------------------------------------------------------
 
     setFormData({ name: "", message: "" });
   };

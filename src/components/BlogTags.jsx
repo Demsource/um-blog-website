@@ -3,7 +3,9 @@ import "./BlogTags.css";
 import { BlogTagsContext } from "../AppContext";
 
 const BlogTags = ({ activeTags, toggleActiveTags }) => {
+  // Get all unique blog tags
   const tags = useContext(BlogTagsContext);
+  // ---------------------------------------------------------
 
   return (
     <div className="tags">

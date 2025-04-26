@@ -11,9 +11,11 @@ const Home = () => {
   const tags = useContext(BlogTagsContext);
   const [activeTags, setActiveTags] = useState(tags);
 
+  // Handle search query from input element by searchText state
   const handleSearch = (e) => {
     setSearchText(e.target.value);
   };
+  // ---------------------------------------------------------
 
   // Handle filter blogs by tags
   const toggleActiveTags = (tag) => {

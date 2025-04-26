@@ -5,32 +5,36 @@ li.blog-item {
   overflow: hidden;
 }
 
-li.blog-item a:hover img {
-  scale: 1.1;
-  transition: all 2s;
-}
-
-li.blog-item .meta {
-  padding: 20px;
-}
-
 li.blog-item a {
   color: #0b3948;
   text-decoration: none;
 }
 
-li.blog-item a span {
+li.blog-item a:hover .cover-image {
+  overflow: hidden;
+}
+
+li.blog-item a:hover .cover-image img {
+  scale: 1.1;
+  transition: all 2s;
+}
+
+li.blog-item a img {
+  object-fit: cover;
+  width: 100%;
+}
+
+li.blog-item a .meta {
+  padding: 20px;
+}
+
+li.blog-item a .meta span {
   display: block;
   text-align: end;
   margin-bottom: 5px;
 }
 
-li.blog-item img {
-  object-fit: cover;
-  width: 100%;
-}
-
-li.blog-item p.content {
+li.blog-item .meta p.content {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

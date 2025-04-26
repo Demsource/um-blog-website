@@ -9,9 +9,13 @@ export const BlogTagsContext = createContext();
 const AppProvider = ({ children }) => {
   const [blogs, setBlogs] = useState(data);
 
+  // Get unique slugs from each blog
   const validSlugs = blogs.map((blog) => blog.slug);
+  // ---------------------------------------------------------
 
+  // Get a single blog
   const getBlog = (slug) => blogs.find((blog) => blog.slug === slug);
+  // ---------------------------------------------------------
 
   // Get all unique blog tags
   const tags = [];
