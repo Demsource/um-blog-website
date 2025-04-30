@@ -14,11 +14,15 @@
 }
 
 .blog .go-back a {
-  color: #0b3948;
+  background-color: #416165;
+  border-radius: 10px;
+  color: #d9dbf1;
   text-decoration: none;
+  padding: 10px 20px;
 }
 .blog .go-back a:hover {
-  color: #416165;
+  background-color: #0b3948;
+  color: white;
 }
 
 .blog h2 {
