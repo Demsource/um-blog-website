@@ -1,9 +1,6 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import "./App.css";
 import Layout from "./components/Layout";
-// import Home from "./pages/Home";
-// import Blog from "./pages/Blog";
-// import ErrorPage from "./pages/ErrorPage";
 import AppProvider from "./AppContext";
 import { lazy, Suspense } from "react";
 
