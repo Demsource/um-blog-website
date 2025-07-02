@@ -1,10 +1,15 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import "./App.css";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import Blog from "./pages/Blog";
-import ErrorPage from "./pages/ErrorPage";
+// import Home from "./pages/Home";
+// import Blog from "./pages/Blog";
+// import ErrorPage from "./pages/ErrorPage";
 import AppProvider from "./AppContext";
+import { lazy, Suspense } from "react";
+
+const Home = lazy(() => import("./pages/Home"));
+const Blog = lazy(() => import("./pages/Blog"));
+const ErrorPage = lazy(() => import("./pages/ErrorPage"));
 
 const router = createHashRouter([
   {
@@ -35,7 +40,11 @@ const router = createHashRouter([
 function App() {
   return (
     <div className="blog-website">
-      <RouterProvider basename="/um-blog-website" router={router} />
+      <Suspense
+        fallback={<div style={{ textAlign: "center" }}>Loading...</div>}
+      >
+        <RouterProvider basename="/um-blog-website" router={router} />
+      </Suspense>
     </div>
   );
 }
